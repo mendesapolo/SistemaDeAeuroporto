@@ -1,12 +1,13 @@
 package visual;
+
 import java.util.ArrayList;
 
 /**
  *
- * @author 
+ * @author
  */
 public class PassageiroJFrame extends javax.swing.JFrame {
-
+    
     ArrayList<Passageiro> passageiros = new ArrayList<>();
     TabelaPassageiro listaModelo;
 
@@ -15,9 +16,9 @@ public class PassageiroJFrame extends javax.swing.JFrame {
      */
     public PassageiroJFrame() {
         initComponents();
-   
-    this.listaModelo=new TabelaPassageiro();
-    
+        
+        this.listaModelo = new TabelaPassageiro();
+        
     }
 
     /**
@@ -107,9 +108,9 @@ public class PassageiroJFrame extends javax.swing.JFrame {
         String nome = this.jt_nome.getText();
         String passaporte = this.jt_numpassaporte.getText();
         Passageiro passageiro = new Passageiro(nome, passaporte);
-listaModelo.passageiros.add(passageiro);
-this.
-
+        listaModelo.setListaPassageiro(passageiros);
+        this.jtabela_Passageiro.setModel(listaModelo);
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
