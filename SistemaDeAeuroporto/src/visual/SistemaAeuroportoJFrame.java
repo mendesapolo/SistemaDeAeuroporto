@@ -7,10 +7,7 @@ package visual;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Lenovo
- */
+
 public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
 
     
