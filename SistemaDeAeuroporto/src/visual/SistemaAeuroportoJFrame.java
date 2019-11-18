@@ -17,6 +17,10 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
     public SistemaAeuroportoJFrame() {
         initComponents();
         this.passageiros = new ArrayList<>();
+        listaModelo = new TabelaPassageiro();
+        
+        listaModelo.setListaPassageiro(passageiros);
+        this.jtabela_Passageiro.setModel(listaModelo);
     }
 
     /**
@@ -41,6 +45,7 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
         jtabela_Passageiro = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jButton_CADASTRAR = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jt_numero = new javax.swing.JTextField();
@@ -162,15 +167,23 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Passageiro", jPanel1);
 
+        jButton_CADASTRAR.setText("CADASTRAR");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 981, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jButton_CADASTRAR, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(770, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 491, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(264, Short.MAX_VALUE)
+                .addComponent(jButton_CADASTRAR, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(183, 183, 183))
         );
 
         jTabbedPane1.addTab("Reserva", jPanel2);
@@ -300,7 +313,8 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
         String passaporte = this.jt_numpassaporte.getText();
 
         Passageiro passageiro = new Passageiro(nome, passaporte);
-
+        passageiros.add(passageiro);
+        
         listaModelo.setListaPassageiro(passageiros);
         this.jtabela_Passageiro.setModel(listaModelo);
 
@@ -344,6 +358,7 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton_CADASTRAR;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
