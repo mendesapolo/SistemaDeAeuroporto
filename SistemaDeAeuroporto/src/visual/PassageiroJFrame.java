@@ -1,10 +1,9 @@
 package visual;
-
 import java.util.ArrayList;
 
 /**
  *
- * @author Lenovo
+ * @author 
  */
 public class PassageiroJFrame extends javax.swing.JFrame {
 
@@ -16,6 +15,9 @@ public class PassageiroJFrame extends javax.swing.JFrame {
      */
     public PassageiroJFrame() {
         initComponents();
+   
+    this.listaModelo=new TabelaPassageiro();
+    
     }
 
     /**
@@ -105,7 +107,8 @@ public class PassageiroJFrame extends javax.swing.JFrame {
         String nome = this.jt_nome.getText();
         String passaporte = this.jt_numpassaporte.getText();
         Passageiro passageiro = new Passageiro(nome, passaporte);
-        
+listaModelo.passageiros.add(passageiro);
+this.
 
 
     }//GEN-LAST:event_jButton1ActionPerformed
