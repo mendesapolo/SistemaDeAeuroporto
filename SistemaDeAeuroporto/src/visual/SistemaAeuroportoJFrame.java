@@ -3,24 +3,29 @@ package visual;
 import classe.Passageiro;
 import classe.TabelaPassageiro;
 import java.util.ArrayList;
-
+import classe.Voo;
+import classe.Tabela_Voo;
+import classe.Reserva;
+import classe.Tabela_Reserva;
 
 public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
 
-    
-    ArrayList<Passageiro> passageiros; 
+    ArrayList<Passageiro> passageiros;
     TabelaPassageiro listaModelo;
+
+    ArrayList<Voo> voo;
+    Tabela_Voo listaModeloVoo;
     
+    ArrayList<Reserva> reserva;
+    Tabela_Reserva listaModeloReserva;
     /**
      * Creates new form SistemaAeuroportoJFrame
      */
     public SistemaAeuroportoJFrame() {
         initComponents();
         this.passageiros = new ArrayList<>();
-        listaModelo = new TabelaPassageiro();
-        
-        listaModelo.setListaPassageiro(passageiros);
-        this.jtabela_Passageiro.setModel(listaModelo);
+        this.reserva=new ArrayList<>();
+        this.voo=new ArrayList<>();
     }
 
     /**
@@ -188,7 +193,7 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Reserva", jPanel2);
 
-        jLabel5.setText("jLabel5");
+        jLabel5.setText("CADASTRAR VOO");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -199,6 +204,11 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
         jLabel8.setText("RESERVA");
 
         jButton2.setText("CADASTRAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jtabela_voo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -319,6 +329,11 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
         this.jtabela_Passageiro.setModel(listaModelo);
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
