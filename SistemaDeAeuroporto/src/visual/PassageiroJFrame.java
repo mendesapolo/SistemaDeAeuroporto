@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package visual;
 
 /**
@@ -105,6 +101,7 @@ public class PassageiroJFrame extends javax.swing.JFrame {
         String nome=this.jt_nome.getText();
         String passaporte=this.jt_numpassaporte.getText();
         Passageiro passageiro=new Passageiro(nome, passaporte);
+        
         
                 
     }//GEN-LAST:event_jButton1ActionPerformed
