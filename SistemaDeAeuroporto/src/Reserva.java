@@ -1,6 +1,5 @@
 import visual.Passageiro;
 
-
 public class Reserva {
 
     private String numReserva;

@@ -1,8 +1,5 @@
 
-/**
- *
- * @author
- */
+
 public class Voo {
 
     private int numero_Voo;
