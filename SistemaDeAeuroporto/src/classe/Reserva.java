@@ -1,4 +1,5 @@
-import visual.Passageiro;
+package classe;
+
 
 public class Reserva {
 
