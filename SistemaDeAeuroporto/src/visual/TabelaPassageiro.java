@@ -1,14 +1,69 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package visual;
+
+import java.util.ArrayList;
+import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author Lenovo
+ * @author
  */
-public class TabelaPassageiro {
+public class TabelaPassageiro extends AbstractTableModel {
+
+    ArrayList<Passageiro> passageiros;
+    private String[] colunas = {"Nome do Passageiro", " NÚMERO DO PASSAPORTE"};
+
     
+    public ArrayList<Passageiro> getPassageiros() {
+        return passageiros;
+    }
+
+    public void setInfrator(ArrayList<Passageiro> passageiros) {
+        this.passageiros = passageiros;
+    }
+
+    public String[] getColunas() {
+        return colunas;
+    }
+
+    public void setColunas(String[] colunas) {
+        this.colunas = colunas;
+    }
+
+    @Override
+    public int getRowCount() {
+        return passageiros.size();
+    }
+
+    @Override
+    public int getColumnCount() {
+        return this.colunas.length;
+    }
+
+    @Override
+    public String getColumnName(int column) {
+        return colunas[column];
+    }
+
+    @Override
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        switch (columnIndex) {
+
+            case 0:
+                return passageiros.get(rowIndex).getNome();
+            case 1:
+                return passageiros.get(rowIndex).getNum_Passaporte();
+           
+
+            default: {
+                return null;
+            }
+
+        }
+    }
+
+    public void setListaPassageiro(ArrayList<Passageiro> passageiros) {
+        this.passageiros= passageiros;
+        fireTableDataChanged();
+   
+    } 
 }

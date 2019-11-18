@@ -8,7 +8,7 @@ package visual;
 
 /**
  *
- * @author Mendes Apolo
+ * @author 
  */
 public class Reserva {
     
