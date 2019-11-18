@@ -1,12 +1,12 @@
 package visual;
 
 import classe.Passageiro;
-import classe.TabelaPassageiro;
-import java.util.ArrayList;
-import classe.Voo;
-import classe.Tabela_Voo;
 import classe.Reserva;
+import classe.TabelaPassageiro;
 import classe.Tabela_Reserva;
+import classe.Tabela_Voo;
+import classe.Voo;
+import java.util.ArrayList;
 
 public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
 
@@ -472,10 +472,8 @@ public class SistemaAeuroportoJFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SistemaAeuroportoJFrame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new SistemaAeuroportoJFrame().setVisible(true);
         });
     }
 
