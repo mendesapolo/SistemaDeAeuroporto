@@ -1,11 +1,15 @@
-
 package visual;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author Lenovo
  */
 public class PassageiroJFrame extends javax.swing.JFrame {
+
+    ArrayList<Passageiro> passageiros = new ArrayList<>();
+    TabelaPassageiro listaModelo;
 
     /**
      * Creates new form PassageiroJFrame
@@ -98,12 +102,12 @@ public class PassageiroJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String nome=this.jt_nome.getText();
-        String passaporte=this.jt_numpassaporte.getText();
-        Passageiro passageiro=new Passageiro(nome, passaporte);
+        String nome = this.jt_nome.getText();
+        String passaporte = this.jt_numpassaporte.getText();
+        Passageiro passageiro = new Passageiro(nome, passaporte);
         
-        
-                
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
