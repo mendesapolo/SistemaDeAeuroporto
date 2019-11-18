@@ -8,8 +8,6 @@
  *
  * @author Mendes Apolo
  */
-public class Teste {
-    // Mendes testando o github
+public class Voo {
     
-    private final String fela="MENDES_APOLO";
 }
