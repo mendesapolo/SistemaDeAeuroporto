@@ -7,13 +7,15 @@ public class Reserva {
     private Passageiro passageiro;
     private Voo voo;
     private String tipodereserva; //(1ra classe, executiva, económica)
+    private int assento;
     private double preco;
 
-    public Reserva(String numReserva, Passageiro passageiro, Voo voo, String tipodereserva, double preco) {
+    public Reserva(String numReserva, Passageiro passageiro, Voo voo, String tipodereserva, int assento, double preco) {
         this.numReserva = numReserva;
         this.passageiro = passageiro;
         this.voo = voo;
         this.tipodereserva = tipodereserva;
+        this.assento = assento;
         this.preco = preco;
     }
 
@@ -47,6 +49,14 @@ public class Reserva {
 
     public void setTipodereserva(String tipodereserva) {
         this.tipodereserva = tipodereserva;
+    }
+
+    public int getAssento() {
+        return assento;
+    }
+
+    public void setAssento(int assento) {
+        this.assento = assento;
     }
 
     public double getPreco() {
