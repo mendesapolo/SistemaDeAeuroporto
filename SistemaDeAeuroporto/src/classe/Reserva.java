@@ -1,4 +1,4 @@
-package imagem;
+package classe;
 
 import classe.Passageiro;
 import classe.Voo;

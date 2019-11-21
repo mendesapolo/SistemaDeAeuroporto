@@ -1,18 +1,18 @@
 package classe;
 
-import imagem.Reserva;
+import java.util.ArrayList;
 
 
 public class Voo {
 
     private int numero_Voo;
     private int capacidade;
-    private Reserva lista_Reservas;
+    private ArrayList<Reserva> lista_Reservas;
 
-    public Voo(int numero_Voo, int capacidade, Reserva lista_Reservas) {
+    public Voo(int numero_Voo, int capacidade) {
         this.numero_Voo = numero_Voo;
         this.capacidade = capacidade;
-        this.lista_Reservas = lista_Reservas;
+        this.lista_Reservas = new ArrayList<>();
     }
 
     public int getNumero_Voo() {
@@ -31,12 +31,12 @@ public class Voo {
         this.capacidade = capacidade;
     }
 
-    public Reserva getLista_Reservas() {
+    public ArrayList<Reserva> getLista_Reservas() {
         return lista_Reservas;
     }
 
-    public void setLista_Reservas(Reserva lista_Reservas) {
-        this.lista_Reservas = lista_Reservas;
+    public void setAdicionarReserva(Reserva reserva) {
+        this.lista_Reservas.add(reserva);
     }
 
     @Override
