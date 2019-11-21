@@ -1,7 +1,6 @@
-package visual;
+package imagem;
 
 import classe.Passageiro;
-import classe.Reserva;
 import classe.TabelaPassageiro;
 import classe.Tabela_Reserva;
 import classe.Tabela_Voo;

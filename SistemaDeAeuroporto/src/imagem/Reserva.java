@@ -1,4 +1,7 @@
-package classe;
+package imagem;
+
+import classe.Passageiro;
+import classe.Voo;
 
 
 public class Reserva {

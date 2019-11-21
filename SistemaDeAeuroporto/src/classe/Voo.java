@@ -1,5 +1,7 @@
 package classe;
 
+import imagem.Reserva;
+
 
 public class Voo {
 
